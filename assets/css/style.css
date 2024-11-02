@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary: #ffb900;
+   
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem; /* 16px */
+    font-family: "Poppins", sans-serif;
+    height: 2000px;
+}
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 16px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 999px;
+    background: #171100;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.heading {
+    font-family: var(--font-heading);
+    color: #171100;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17; /* 117.241% */
+}
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26; /* 126.316% */
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all; /* Cắt từng từ */
+}
+
+/* Header */
+
+.header {
+    background-color: #fffcf4;
+}
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+    justify-content: space-between;
+}
+.nav {
+    margin-left: auto;
+}
+.nav ul {
+    display: flex;
+}
+.nav a {
+    position: relative;
+    padding: 8px 21px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.nav a:hover,
+.nav li.active a {
+    color: #171100;
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+    position: absolute;
+    left: 21px;
+    bottom: 6px;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+}
+
+.header .sign-up-btn {
+    min-width: 144px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
+
+.noibatdautien{
+    background-color: #F9F1E7;
+}
+.noibatthu3{
+    background-color: #F9F1E7;
+}
+.noibat{
+    
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.noibat .nav a{
+    font-size: 12px;
+}
+
+
+.noibat2{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/* Định dạng cho thanh tìm kiếm */
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 24px; /* Khoảng cách giữa logo và nút Đăng Ký */
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Tạo hiệu ứng khi người dùng click vào thanh tìm kiếm */
+.search-bar input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(255, 185, 0, 0.3);
+    outline: none;
+}
+
+
+
+/* Footer */
+.footer {
+    padding: 96px 135px 0;
+    background: #B88E2F;
+    margin-top: 50px;
+}
+
+.footer .row {
+    display: flex;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554b;
+}
+.footer .row .column {
+    width: 21.6%;
+}
+.footer .row .column:nth-child(1) {
+    width: 35%;
+}
+
+.footer .desc {
+    margin-top: 18px;
+    max-width: 267px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+
+.footer .socials {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.footer .title {
+    display: inline-block;
+    padding: 0 48px 14px 0;
+    border-bottom: 1px solid #59554b;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.footer .list {
+    margin-top: 28px;
+}
+
+.footer .list a {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+
+.footer .list li:last-child a {
+    margin-bottom: 0;
+}
+
+.footer .list strong {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86; /* 185.714% */
+}
+
+.footer .copyright {
+    padding: 28px 0;
+}
+.footer .copyright p {
+    color: #807d74;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
